@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 11:52:36 by pmeising          #+#    #+#              #
-#    Updated: 2022/08/30 17:18:13 by pmeising         ###   ########.fr        #
+#    Updated: 2022/08/30 22:58:24 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -251,8 +251,72 @@ int	    is_power_of_2(unsigned int n);
 ```
 
 #####________________________________________________________________________________###
+
+```
+Assignment name  : last_word
+Expected files   : last_word.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays its last word followed by a \n.
+
+A word is a section of string delimited by spaces/tabs or by the start/end of
+the string.
+
+If the number of parameters is not 1, or there are no words, display a newline.
+
+Example:
+
+$> ./last_word "FOR PONY" | cat -e
+PONY$
+$> ./last_word "this        ...       is sparta, then again, maybe    not" | cat -e
+not$
+$> ./last_word "   " | cat -e
+$
+$> ./last_word "a" "b" | cat -e
+$
+$> ./last_word "  lorem,ipsum  " | cat -e
+lorem,ipsum$
+$>
+```
+
 #####________________________________________________________________________________###
+
+```
+Assignment name  : max
+Expected files   : max.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Write the following function:
+
+int		max(int* tab, unsigned int len);
+
+The first parameter is an array of int, the second is the number of elements in
+the array.
+
+The function returns the largest number found in the array.
+
+If the array is empty, the function returns 0.
+```
+
 #####________________________________________________________________________________###
+
+```
+Assignment name  : print_bits
+Expected files   : print_bits.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a function that takes a byte, and prints it in binary WITHOUT A NEWLINE
+AT THE END.
+
+Your function must be declared as follows:
+
+void	print_bits(unsigned char octet);
+
+Example, if you pass 2 to print_bits, it will print "00000010"
+```
 
 #####________________________________________________________________________________###
 #####________________________________________________________________________________###
