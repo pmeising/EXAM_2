@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 11:52:36 by pmeising          #+#    #+#              #
-#    Updated: 2022/08/30 22:58:24 by pmeising         ###   ########.fr        #
+#    Updated: 2022/08/31 12:41:59 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -319,5 +319,127 @@ Example, if you pass 2 to print_bits, it will print "00000010"
 ```
 
 #####________________________________________________________________________________###
+```
+Assignment name  : reverse_bits
+Expected files   : reverse_bits.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Write a function that takes a byte, reverses it, bit by bit (like the
+example) and returns the result.
+
+Your function must be declared as follows:
+
+unsigned char	reverse_bits(unsigned char octet);
+
+Example:
+
+  1 byte
+_____________
+ 0100  0001
+     ||
+     \/
+ 1000  0010
+```
+
 #####________________________________________________________________________________###
+
+
+```
+Assignment name  : snake_to_camel
+Expected files   : snake_to_camel.c
+Allowed functions: malloc, free, realloc, write
+--------------------------------------------------------------------------------
+
+Write a program that takes a single string in snake_case format
+and converts it into a string in lowerCamelCase format.
+
+A snake_case string is a string where each word is in lower case, separated by
+an underscore "_".
+
+A lowerCamelCase string is a string where each word begins with a capital letter
+except for the first one.
+
+Examples:
+$>./camel_to_snake "here_is_a_snake_case_word"
+hereIsASnakeCaseWord
+$>./camel_to_snake "hello_world" | cat -e
+helloWorld$
+$>./camel_to_snake | cat -e
+$
+
+```
+#####________________________________________________________________________________###
+
+```
+Assignment name  : union
+Expected files   : union.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes two strings and displays, without doubles, the
+characters that appear in either one of the strings.
+
+The display will be in the order characters appear in the command line, and
+will be followed by a \n.
+
+If the number of arguments is not 2, the program displays \n.
+
+Example:
+
+$>./union zpadinton "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
+zpadintoqefwjy$
+$>./union ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6vewg4thras$
+$>./union "rien" "cette phrase ne cache rien" | cat -e
+rienct phas$
+$>./union | cat -e
+$
+$>
+$>./union "rien" | cat -e
+$
+$>
+```
+#####________________________________________________________________________________###
+
+
+```
+Assignment name  : wdmatch
+Expected files   : wdmatch.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes two strings and checks whether it's possible to
+write the first string with characters from the second string, while respecting
+the order in which these characters appear in the second string.
+
+If it's possible, the program displays the string, followed by a \n, otherwise
+it simply displays a \n.
+
+If the number of arguments is not 2, the program displays a \n.
+
+Examples:
+
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "quarante deux" "qfqfsudf arzgsayns tsregfdgs sjytdekuoixq " | cat -e
+quarante deux$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$
+```
+
+#####________________________________________________________________________________###
+
+#####________________________________________________________________________________###
+
+#####________________________________________________________________________________###
+
+#####________________________________________________________________________________###
+
+#####________________________________________________________________________________###
+
 #####________________________________________________________________________________###

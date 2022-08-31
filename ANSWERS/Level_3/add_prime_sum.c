@@ -6,12 +6,14 @@
 /*   By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 15:27:55 by pmeising          #+#    #+#             */
-/*   Updated: 2022/08/29 17:36:12 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/08/31 13:19:46 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+
+// Not finished function
 
 int	ft_atoi(char *string)
 {

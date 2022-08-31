@@ -1,35 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   wdmatch.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 22:58:50 by pmeising          #+#    #+#             */
-/*   Updated: 2022/08/31 11:58:50 by pmeising         ###   ########.fr       */
+/*   Created: 2022/08/31 12:42:20 by pmeising          #+#    #+#             */
+/*   Updated: 2022/08/31 13:08:11 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdlib.h>
 
-void	print_bits(unsigned char octet)
+int	main(int argc, char **argv)
 {
-	int				i;
-	unsigned char	bit;
+	int		i;
+	int		j;
+	int		count;
+	char	*str1;
+	char	*str2;
 
-	i = 8;
-	while (i)
+	if (argc == 3)
 	{
-		i--;
-		bit = (octet >> i & 1) + '0';
-		write(1, &bit, 1);
+		i = 0;
+		j = 0;
+		count = 0;
+		str1 = argv[1];
+		str2 = argv[2];
+		while (str1[i] && str2[j])
+		{
+			while (str2[j] != str1[i] && str2[j])
+				j++;
+			if (str2[j])
+				count++;
+			i++;
+		}
+		if (count == i)
+		{
+			i = 0;
+			while (str1[i])
+			{
+				write(1, &str1[i], 1);
+				i++;
+			}
+		}
 	}
+	write(1, "\n", 1);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	if (argc == 2)
-// 		print_bits(atoi(argv[1]));
-// 	return (0);
-// }

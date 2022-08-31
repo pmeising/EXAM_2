@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   snake_to_camel.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 22:58:50 by pmeising          #+#    #+#             */
-/*   Updated: 2022/08/31 11:58:50 by pmeising         ###   ########.fr       */
+/*   Created: 2022/08/31 12:17:52 by pmeising          #+#    #+#             */
+/*   Updated: 2022/08/31 12:27:04 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdlib.h>
 
-void	print_bits(unsigned char octet)
+int	main(int argc, char **argv)
 {
-	int				i;
-	unsigned char	bit;
+	int		i;
+	char	l;
+	char	*snake;
 
-	i = 8;
-	while (i)
+	if (argc == 2)
 	{
-		i--;
-		bit = (octet >> i & 1) + '0';
-		write(1, &bit, 1);
+		i = 0;
+		snake = argv[1];
+		while (snake[i])
+		{
+			if (snake[i] == '_')
+			{
+				i++;
+				l = snake[i] - 32;
+			}
+			else
+				l = snake[i];
+			write(1, &l, 1);
+			i++;
+		}
 	}
+	write(1, "\n", 1);
+	return (0);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	if (argc == 2)
-// 		print_bits(atoi(argv[1]));
-// 	return (0);
-// }
